@@ -1,4 +1,4 @@
-package manager_app;
+package ru.umka.manager_app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
