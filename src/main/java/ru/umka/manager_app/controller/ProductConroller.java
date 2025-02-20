@@ -5,6 +5,7 @@ import org.springframework.context.MessageSource;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 import ru.umka.manager_app.controller.payload.UpdateProductPayload;
@@ -36,7 +37,7 @@ public class ProductConroller {
     }
 
     @PostMapping("edit")
-    public String updateProduct(@ModelAttribute("product") Product product, UpdateProductPayload payload) {
+    public String updateProduct(@ModelAttribute("product") Product product, @Validated UpdateProductPayload payload) {
         this.productService.updateProduct(product.getId(), payload.title(), payload.details());
         return "redirect:/catalog/products/%d".formatted(product.getId());
     }
