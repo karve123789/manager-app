@@ -64,6 +64,9 @@
                     <version>3.12.1</version>
                     <configuration>
                         <parameters>true</parameters>
+                        <source>21</source>  <!-- Явно указываем Java 21 -->
+                        <target>21</target>  <!-- Явно указываем Java 21 -->
+                        <encoding>UTF-8</encoding>
                     </configuration>
                 </plugin>
             </plugins>
